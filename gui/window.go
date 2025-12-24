@@ -1,7 +1,7 @@
 package main
 
 import (
-	"esmodmanager/lib"
+	"herbarium/lib"
 	"fmt"
 	"sort"
 	"strings"
