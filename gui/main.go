@@ -1,7 +1,7 @@
 package main
 
 import (
-	"esmodmanager/lib"
+	"herbarium/lib"
 	"os"
 
 	"github.com/diamondburned/gotk4-adwaita/pkg/adw"

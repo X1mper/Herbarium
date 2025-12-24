@@ -1,8 +1,12 @@
 **[🇷🇺 Русский](README_RU.md) | [🇬🇧 English](README.md)**
 
-## ESModManager-Go
+# Herbarium
 
-A CLI utility for managing mods for the game **Everlasting Summer**, written in Go. It allows you to enable/disable mods, automatically detect mod information, launch the game with selected mods.
+A mod manager for the game **Everlasting Summer**, written in Go, including a CLI utility and a modern GUI on GTK4 / LibAdwaita.
+Allows enabling and disabling mods, automatically detecting mod information, and launching the game with only the desired mods.
+
+![logo](data/icons/hicolor/scalable/apps/ru.ximper.Herbarium.svg)
+![mainwindow](data/images/1-mainwindow.png)
 
 ---
 
@@ -17,50 +21,45 @@ A CLI utility for managing mods for the game **Everlasting Summer**, written in 
 ## Installation
 
 ```bash
-go build -o esmodmanager ./cli/
+meson setup _build --prefix=/usr
+meson install -C _build/
 ```
-(Meson.build coming soon)
 
 ---
 
-## Usage
+## CLI Usage
 
-### List mods
-
+### Show mod list
 ```bash
-./esmodmanager list
+herbarium-cli list
 ```
 
 ### Enable a mod
-
 ```bash
-./esmodmanager enable <folder|codename>
+herbarium-cli enable <folder|codename>
 ```
 
 ### Disable a mod
-
 ```bash
-./esmodmanager disable <folder|codename>
+herbarium-cli disable <folder|codename>
 ```
 
 ### Enable/disable all mods
-
 ```bash
-./esmodmanager enable ALL
-./esmodmanager disable ALL
+herbarium-cli enable ALL
+herbarium-cli disable ALL
 ```
 
 ### Launch the game
-
 ```bash
-./esmodmanager launch
+herbarium-cli launch
 ```
 
 ---
 
 ## Configuration
 
-On first launch, the program automatically creates two files:
+On first launch, the program automatically creates two files in `$HOME/.config/ru.ximper.Herbarium`:
 
 `config.yaml` — program configuration
 

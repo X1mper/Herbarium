@@ -1,4 +1,4 @@
-module esmodmanager
+module herbarium
 
 go 1.25.1
 

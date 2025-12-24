@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"esmodmanager/lib"
+	"herbarium/lib"
 
 	"github.com/urfave/cli/v3"
 )
@@ -14,7 +14,7 @@ func main() {
 	lib.InitLocales()
 
 	cmd := &cli.Command{
-		Name:  "esmodmanager",
+		Name:  "herbarium",
 		Usage: lib.T_("Manager for Everlasting Summer mods"),
 		Commands: []*cli.Command{
 			{
